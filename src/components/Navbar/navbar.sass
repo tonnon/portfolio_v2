@@ -1,0 +1,153 @@
+@import "../../styles/_colors.sass"
+@import "../../styles/_breakpoints.sass"
+
+%display-flex
+  display: flex
+  align-items: center
+
+%top
+  top: 9px
+
+%box-sizing
+  box-sizing: border-box
+
+.toggleWrapper
+  border-bottom: 3px solid $primary-neon
+  list-style-type: none
+  list-style-position: inside
+  position: fixed
+  left: 0
+  width: 100%
+  padding: 15px 20px
+  @extend %box-sizing
+  box-shadow: $neon-shadow
+  @extend %display-flex
+  justify-content: space-between
+
+
+#globalNav
+  font-size: 1em
+  @extend %display-flex
+  margin: 0
+  padding: 0
+
+#globalNav li a 
+  text-decoration: none
+  @extend %box-sizing
+  transition: .3s color ease-in-out
+
+#globalNav li a
+  &:link, &:visited
+    color: $white
+
+  &:hover
+    color: $blue
+
+nav #userTab #userTabContainer 
+  height: 40px
+  @extend %display-flex
+
+nav #userTab span 
+  color: #FFFFFF
+  display: inline-block
+  font-size: 1em
+  font-weight: 300
+  width: fit-content
+  margin-left: 45px
+  white-space: nowrap
+  transition: .3s color ease-in-out
+  
+.logo
+  position: absolute
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  border: 0.1vw solid #a78247
+  overflow: hidden
+
+  &:before, &:after
+    content: ''
+    display: block
+    position: absolute
+
+.wrapper
+  border: 0
+  top: 0
+  left: 10px
+
+  .icon
+    position: relative
+    display: inline-block
+    width: 50px
+    bottom: 0
+    right: 0
+    height: 50px
+    border: 0
+    overflow: visible
+
+    .moon, .planetoid, .planet
+      border-radius: 50%
+      background: $blue
+
+    &.icon10
+      .orbit, .planet
+        border-radius: 50%
+
+      .orbit
+        border-color: $blue $blue $blue transparent
+        overflow: visible
+
+        &:before
+          top: -7.5%
+          left: 30%
+          width: 15%
+          height: 15%
+          border: 0.1vw solid $blue
+          border-radius: 50%
+          background: $blue
+
+        &.orbit1
+          top: 17.5%
+          left: 17.5%
+          width: 65%
+          height: 65%
+          transform: rotate(150deg)
+          animation: icon10orbit 5s ease 0s infinite
+
+        &.orbit2
+          top: 30%
+          left: 30%
+          width: 40%
+          height: 40%
+          transform: rotate(50deg)
+          animation: icon10orbit 5s ease 0s infinite reverse
+
+      .planet
+        top: 42.5%
+        left: 42.5%
+        width: 15%
+        height: 15%
+        animation: icon10planet 5s ease 0s infinite alternate
+
+@keyframes icon10orbit
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+@keyframes icon10planet
+  0%
+    transform: scale(1)
+
+  100%
+    transform: scale(1.25)
+
+@media (min-width: $mobile-sm) and (max-width: $mobile-md)
+  nav #userTab span
+    display: none
+
+
+
+
+
