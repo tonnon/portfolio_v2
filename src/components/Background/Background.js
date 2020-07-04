@@ -1,5 +1,7 @@
 import React from 'react';
 import './background.sass';
+import "../../styles/_colors.sass"
+
 
 const HORIZON_Y = 0.8;
 const SPACING_Y = 2.4;

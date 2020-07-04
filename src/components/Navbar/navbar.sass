@@ -1,153 +1,174 @@
+
 @import "../../styles/_colors.sass"
-@import "../../styles/_breakpoints.sass"
 
-%display-flex
-  display: flex
-  align-items: center
-
-%top
-  top: 9px
-
-%box-sizing
-  box-sizing: border-box
-
-.toggleWrapper
-  border-bottom: 3px solid $primary-neon
+ul
   list-style-type: none
-  list-style-position: inside
+  display: flex
+  padding: 20px 0
+  box-shadow: 3px 3px 10px $purple
+  border-radius: 40px
+  border-top-left-radius: 0px
+  border-top-right-radius: 0px
+  transition: background 20s ease-in
+
+.navigation
   position: fixed
-  left: 0
-  width: 100%
-  padding: 15px 20px
-  @extend %box-sizing
-  box-shadow: $neon-shadow
-  @extend %display-flex
-  justify-content: space-between
+  bottom: 6%
+  left: 50%
+  transform: translate(-50%, 0%)
 
-
-#globalNav
-  font-size: 1em
-  @extend %display-flex
-  margin: 0
-  padding: 0
-
-#globalNav li a 
-  text-decoration: none
-  @extend %box-sizing
-  transition: .3s color ease-in-out
-
-#globalNav li a
-  &:link, &:visited
-    color: $white
-
-  &:hover
-    color: $blue
-
-nav #userTab #userTabContainer 
-  height: 40px
-  @extend %display-flex
-
-nav #userTab span 
-  color: #FFFFFF
-  display: inline-block
-  font-size: 1em
-  font-weight: 300
-  width: fit-content
-  margin-left: 45px
-  white-space: nowrap
-  transition: .3s color ease-in-out
-  
-.logo
-  position: absolute
-  box-sizing: border-box
-  margin: 0
-  padding: 0
-  border: 0.1vw solid #a78247
-  overflow: hidden
-
-  &:before, &:after
-    content: ''
-    display: block
-    position: absolute
-
-.wrapper
-  border: 0
-  top: 0
-  left: 10px
-
-  .icon
-    position: relative
-    display: inline-block
-    width: 50px
+.fixed
+  position: fixed
+  background-size: 400% 400%
+  background-image: linear-gradient(-45deg, $bright-neon, $pulse-neon, $light-neon, $primary-neon, $purple)
+  animation: 12s myGradient infinite
+  border-radius: 40px
+  box-shadow: -3px -3px 10px $purple
+  border-bottom-left-radius: 0px
+  border-bottom-right-radius: 0px
+  transition: all .5s ease-in
+  bottom: 6%
+  left: 50%;
+  transform: translate(-50%, 75%);
+  ul
     bottom: 0
-    right: 0
-    height: 50px
-    border: 0
-    overflow: visible
+    padding: 0
+    box-shadow: none
+    
 
-    .moon, .planetoid, .planet
-      border-radius: 50%
-      background: $blue
-
-    &.icon10
-      .orbit, .planet
-        border-radius: 50%
-
-      .orbit
-        border-color: $blue $blue $blue transparent
-        overflow: visible
-
-        &:before
-          top: -7.5%
-          left: 30%
-          width: 15%
-          height: 15%
-          border: 0.1vw solid $blue
-          border-radius: 50%
-          background: $blue
-
-        &.orbit1
-          top: 17.5%
-          left: 17.5%
-          width: 65%
-          height: 65%
-          transform: rotate(150deg)
-          animation: icon10orbit 5s ease 0s infinite
-
-        &.orbit2
-          top: 30%
-          left: 30%
-          width: 40%
-          height: 40%
-          transform: rotate(50deg)
-          animation: icon10orbit 5s ease 0s infinite reverse
-
-      .planet
-        top: 42.5%
-        left: 42.5%
-        width: 15%
-        height: 15%
-        animation: icon10planet 5s ease 0s infinite alternate
-
-@keyframes icon10orbit
+@keyframes myGradient
   0%
-    transform: rotate(0deg)
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
 
   100%
-    transform: rotate(360deg)
+    background-position: 0% 50%
 
-@keyframes icon10planet
+.fa-search
+  transition: 1s
+  cursor: pointer
+  margin-left: 30px
+
+.active, .active1, .active2, .active3
+  transition: 1s
+
+li a
+  color: #fff
+  text-decoration: none
+  padding: 24px 24px
+  font-family: verdana
+  font-weight: lighter
+  font-size: 16px
+  letter-spacing: 1px
+  opacity: 0.9
+
+.fa-search:hover
+  color: #fff
+  animation: 1.5s myFlash linear infinite
+  text-shadow: 2px 2px 30px #fff
+  transition: 2s
+
+.active3:hover
+  color: #fff
+  animation: 1.5s myFlash linear infinite
+  text-shadow: 2px 2px 30px #fff
+  transition: 2s
+  margin-top: -100px
+
+.active2:hover, .active1:hover, .active:hover
+  color: #fff
+  animation: 1.5s myFlash linear infinite
+  text-shadow: 2px 2px 30px #fff
+  transition: 2s
+
+@keyframes myFlash
   0%
-    transform: scale(1)
+    opacity: 1
+    text-shadow: transparent
+
+  50%
+    opacity: .1
 
   100%
-    transform: scale(1.25)
+    opacity: 1
+    text-shadow: 2px 2px 20px #fff
 
-@media (min-width: $mobile-sm) and (max-width: $mobile-md)
-  nav #userTab span
-    display: none
+.line-w5
+  width: 5px
+  height: 200px
+  background: tomato
+  position: absolute
+  transform: translate(-50%, -50%)
+  top: 50%
+  left: 70%
+  border-radius: 30px
+  background-image: linear-gradient(-45deg, #ff408c, #ff4040, #6666ff)
+  background-size: 400% 400%
+  animation: 13s myBackground infinite
+  box-shadow: 2px 2px 10px #ff2e38
+  transition: 3s
 
+@keyframes myBackground
+  0%
+    background-position: 0% 50%
+    opacity: 0%
 
+  50%
+    background-position: 100% 50%
 
+  100%
+    background-position: 0% 50%
+    opacity: 1
 
+@keyframes myLinear
+  0%
+    width: 50px
+
+  100%
+    width: 250px
+
+.flash-GIF
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  background: #ff5959
+  position: absolute
+  transform: translate(-50%, -50%)
+  top: 15%
+  left: 10%
+  box-shadow: 2px 2px 20px #d4267d
+  animation: 1.6s myFlash linear infinite
+
+@keyframes myFlash
+  0%
+    opacity: 1
+
+  50%
+    opacity: .1
+
+  100%
+    opacity: 1
+
+nav
+  transition: 3s
+  animation: 3s myAnimation ease linear
+
+@keyframes myAnimation
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+.nav-type
+  animation: 3s myWorld ease linear
+
+@keyframes myWorld
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
 
