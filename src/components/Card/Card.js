@@ -5,7 +5,19 @@ function Card() {
     
     return (
         <div id="portfolio">  
-
+        <p>OI</p>
+        <p>OI</p>
+        <p>OI</p>
+        <p>OI</p>
+        <p>OI</p>
+        <p>OI</p>
+        <p>OI</p>
+        <p>OI</p><p>OI</p>
+        <p>OI</p>
+        <p>OI</p>
+        <p>OI</p><p>OI</p>
+        <p>OI</p>
+        <p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p><p>OI</p>
         </div>
     );
 }
