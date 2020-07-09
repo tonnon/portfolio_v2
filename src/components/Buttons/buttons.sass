@@ -1,24 +1,29 @@
 @import "../../styles/_colors.sass"
 
 .button
-  background-color: $black
-  padding: 20px 30px
-  font-size: 25px
-  border-radius: 10px
+  background-image: linear-gradient(-45deg, $bright-neon, $pulse-neon, $light-neon, $primary-neon, $purple)
+  padding: 20px
+  outline: none
+  border-radius: 30px
   font-weight: bold
-  box-shadow: 0px -2px 4px $pulse-neon
-  text-shadow: 1px 1px 2px $pulse-neon
+  box-shadow: 0px -2px 10px $bright-neon
+  text-shadow: 1px 1px 2px $bright-neon
   text-align: center
   transition: 2s
+  border: none
+  cursor: pointer
 
   &:hover
     color: $pulse-neon
+
+  svg
+    color: $black
+    font-size: 25px
     
-  
+
 .margin
   margin-top: 20px
   transition: 2s
-  box-shadow: 0px 1px 4px $purple
   text-shadow: 1px 1px 2px $purple
 
 .wrapper-fluid-fex 
@@ -27,4 +32,8 @@
     justify-content: space-around
     height: 100px
 
+button[title]
+  &:hover,
+  &:after
+    background-color: $purple 
     

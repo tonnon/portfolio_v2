@@ -1,22 +1,9 @@
 import React from 'react';
+import { FaGamepad } from 'react-icons/fa'; 
+import { MdSelectAll, MdWebAsset } from 'react-icons/md'; 
 import './buttons.sass';
 
-/* let items = [
-    {
-        link: 'Portfólio',
-        href: '#portfolio'
-    },
-    {
-        link: 'CV',
-        href: `${cvpdf}`,
-        blank: '_blank'
-    },
-    {
-        link: 'Contato',
-        href: "#contact",
-    }
-];
- */
+
 
 function Buttons() {
 
@@ -36,6 +23,21 @@ function Buttons() {
     buttonHover();
   }
 
+ let buttons = [
+    {
+        title: 'Todos',
+        icon: <MdSelectAll/>
+    },
+    {
+        title: 'Websites',
+        icon: <MdWebAsset/>
+    },
+    {
+        title: 'Jogos',
+        icon: <FaGamepad/>
+    }
+];
+ 
     return (
         <div id="buttons">
           <div className="wrapper">
@@ -43,36 +45,13 @@ function Buttons() {
               <div className="content">
                 <div className="navigation-bar">
                   <div className="wrapper-fluid-fex">
-                    <div className="w4-container-laptop">
-                      <a href="https://youtube.com/" target="_blank" title="Youtube.com">
-                        <i className="button fa fa-phone" id="fa-laptop"></i>
-                      </a>
-                    </div>
-                    <div className="w4-container-laptop">
-                      <a href="https://youtube.com/" target="_blank" title="Youtube.com">
-                        <i className="button fa fa-laptop" id="fa-laptop"></i>
-                      </a>
-                    </div>
-                    <div className="w4-container-laptop">
-                      <a href="https://youtube.com/" target="_blank" title="Youtube.com">
-                        <i className="button fa fa-laptop" id="fa-laptop"></i>
-                      </a>
-                    </div>
-                    <div className="w4-container-laptop">
-                      <a href="https://youtube.com/" target="_blank" title="Youtube.com">
-                        <i className="button fa fa-laptop" id="fa-laptop"></i>
-                      </a>
-                    </div>
-                    <div className="w4-container-laptop">
-                      <a href="https://youtube.com/" target="_blank" title="Youtube.com">
-                        <i className="button fa fa-laptop" id="fa-laptop"></i>
-                      </a>
-                    </div>
-                    <div className="w4-container-laptop">
-                      <a href="https://youtube.com/" target="_blank" title="Youtube.com">
-                        <i className="button fa fa-laptop" id="fa-laptop"></i>
-                      </a>
-                    </div>
+                    {buttons.map((button, index) => (
+                      <div key={index} className="w4-container-laptop">
+                        <button  title={button.title} className="button">
+                          {button.icon} 
+                        </button>
+                      </div>
+                    ))}  
                   </div>
                 </div>
               </div>
