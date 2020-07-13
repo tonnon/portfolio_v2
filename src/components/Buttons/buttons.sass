@@ -13,6 +13,8 @@
   border: none
   cursor: pointer
 
+
+
   &:hover
     color: $pulse-neon
 
@@ -20,7 +22,6 @@
     color: $black
     font-size: 25px
     
-
 .margin
   margin-top: 20px
   transition: 2s
@@ -35,5 +36,12 @@
 button[title]
   &:hover,
   &:after
-    background-color: $purple 
-    
+    background-color: $purple
+
+.navigation-fixed
+  position: fixed
+  width: 100%
+  background: $black
+  z-index: 999
+  transition: all 0.5s ease-in
+  box-shadow: 0px -2px 10px $bright-neon

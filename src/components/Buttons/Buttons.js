@@ -19,22 +19,39 @@ function Buttons() {
     })
   }
 
-  window.onload = () => {
-    buttonHover();
-  }
+  window.onscroll = () => {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.querySelector(".navigation-bar").classList.add('navigation-fixed');
+    } else {
+        document.querySelector(".navigation-bar").classList.remove('navigation-fixed');
+    }
+}
+
+function filter() {
+  let btnActive = () => document.querySelector('.active');
+  console.log(btnActive());
+}
+
+window.onload = () => {
+  buttonHover();
+  filter();
+}
 
  let buttons = [
     {
         title: 'Todos',
-        icon: <MdSelectAll/>
+        icon: <MdSelectAll/>,
+        class: 'button active'
     },
     {
         title: 'Websites',
-        icon: <MdWebAsset/>
+        icon: <MdWebAsset/>,
+        class: 'button'
     },
     {
         title: 'Jogos',
-        icon: <FaGamepad/>
+        icon: <FaGamepad/>,
+        class: 'button'
     }
 ];
  
@@ -47,7 +64,7 @@ function Buttons() {
                   <div className="wrapper-fluid-fex">
                     {buttons.map((button, index) => (
                       <div key={index} className="w4-container-laptop">
-                        <button  title={button.title} className="button">
+                        <button  title={button.title} className={button.class}>
                           {button.icon} 
                         </button>
                       </div>

@@ -21,19 +21,8 @@ let items = [
 
 
 function Navbar() {
-    
-    window.onscroll = () => {
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            document.getElementById("nav").classList.add('fixed');
-            document.getElementById("nav").classList.remove('navigation');
-        } else {
-            document.getElementById("nav").classList.remove('fixed');
-            document.getElementById("nav").classList.add('navigation');
-        }
-    }
-    
     return (
-        <div className="navigation" id="nav">
+        <div className="fixed" id="nav">
             <nav>
                 <ul id="globalNav">
                 {items.map((item, index) => (
