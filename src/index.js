@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Background from './components/Background/Background';
 import Navbar from './components/Navbar/Navbar';
-import Buttons from './components/Buttons/Buttons';
-import Card from './components/Card/Card';
+import Portfolio from './components/Portfolio/Portfolio';
 import * as serviceWorker from './serviceWorker';
 
 import './index.sass';
@@ -13,8 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Background />
     <Navbar/>
-    <Buttons/>
-    <Card/>
+    <Portfolio/>
   </React.StrictMode>,
   document.getElementById('root')
 );
