@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './portfolio.sass';
-import ModalVideo from 'react-modal-video'
+import ModalVideo from 'react-modal-video';
+import FadeIn from 'react-fade-in';
 
 import { FaGamepad } from 'react-icons/fa'; 
 import { MdSelectAll, MdWebAsset } from 'react-icons/md'; 
@@ -97,17 +98,17 @@ function Portfolio() {
                             <div className="navigation-bar">
                                 <div className="wrapper-fluid-fex">
                                     <div className="w4-container-laptop">
-                                        <button  title="Todos" className="button" active={filter === 'all'} onClick={() => setFilter('all')}>
+                                        <button  title="Todos" className="button"  onClick={() => setFilter('all')}>
                                             <MdSelectAll/>
                                         </button>
                                     </div>
                                     <div className="w4-container-laptop">
-                                        <button  title="Websites" className="button" active={filter === 'website'} onClick={() => setFilter('website')}>
+                                        <button  title="Websites" className="button"  onClick={() => setFilter('website')}>
                                             <MdWebAsset/>
                                         </button>
                                     </div>
                                     <div className="w4-container-laptop">
-                                        <button  title="Jogos" className="button" active={filter === 'game'} onClick={() => setFilter('game')}>
+                                        <button  title="Jogos" className="button" onClick={() => setFilter('game')}>
                                             <FaGamepad/>
                                         </button>
                                     </div>
@@ -119,17 +120,20 @@ function Portfolio() {
             </div>
             <div id="portfolio">
                 {projects.map(project => project.filtered === true ? (
-                <div key={project.title} className="wrap wrap--1">
-                    <a className={project.class} target="_blank" href={project.video || project.url} style={{ backgroundImage:'url(' + `${project.img}` + ')'}}>
-                        <p>{project.title}</p>
-                    </a> 
-                    </div>                
+                    <FadeIn>
+                        <div key={project.title} className="card-wrap">
+                            <div className="card">
+                                <a target="_blank" href={project.video || project.url}>
+                                <div className={project.class} className="card-bg" style={{ backgroundImage:'url(' + `${project.img}` + ')'}}/>
+                                <div className="card-info">
+                                    <h1>{project.title}</h1>
+                                </div>
+                                </a> 
+                            </div> 
+                        </div>  
+                    </FadeIn>
+                               
                 ) : '' )}
-                {projects.map((project, index) => (
-                    <div key={index}>
-                        <ModalVideo channel='youtube' isOpen={project.state} videoId={project.video} onClose={() => this.setState({isOpen: false})} />
-                    </div>
-                ))} 
             </div>
         </div>
     );
