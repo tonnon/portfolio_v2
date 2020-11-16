@@ -1,0 +1,591 @@
+@import "../../styles/_colors.sass"
+
+.wrapper
+  width: 100px
+  height: 300px
+  margin: auto
+  -webkit-transform-style: preserve-3d
+  transform-style: preserve-3d
+
+#w1
+  transform: rotate(180deg)
+
+.bottom, .circle
+  width: 100px
+  height: 100px
+  position: absolute
+  bottom: 0
+  left: -25px
+  border-radius: 100%
+  border: 2px dashed LIGHTSLATEBLUE
+  -webkit-transform: rotateX(60deg) translateZ(0) scale(1)
+  transform: rotateX(60deg) translateZ(0) scale(1)
+  padding: 25px
+  
+.circle
+  background-color: $pulse-neon
+  background-clip: content-box
+  -webkit-animation: move 10s infinite
+  animation: move 10s infinite
+
+  &:nth-child(1)
+    -webkit-animation-delay: -0.3333333333s
+    animation-delay: -0.3333333333s
+
+  &:nth-child(2)
+    -webkit-animation-delay: -0.6666666667s
+    animation-delay: -0.6666666667s
+
+  &:nth-child(3)
+    -webkit-animation-delay: -1s
+    animation-delay: -1s
+
+  &:nth-child(4)
+    -webkit-animation-delay: -1.3333333333s
+    animation-delay: -1.3333333333s
+
+  &:nth-child(5)
+    -webkit-animation-delay: -1.6666666667s
+    animation-delay: -1.6666666667s
+
+  &:nth-child(6)
+    -webkit-animation-delay: -2s
+    animation-delay: -2s
+
+  &:nth-child(7)
+    -webkit-animation-delay: -2.3333333333s
+    animation-delay: -2.3333333333s
+
+  &:nth-child(8)
+    -webkit-animation-delay: -2.6666666667s
+    animation-delay: -2.6666666667s
+
+  &:nth-child(9)
+    -webkit-animation-delay: -3s
+    animation-delay: -3s
+
+  &:nth-child(10)
+    -webkit-animation-delay: -3.3333333333s
+    animation-delay: -3.3333333333s
+
+  &:nth-child(11)
+    -webkit-animation-delay: -3.6666666667s
+    animation-delay: -3.6666666667s
+
+  &:nth-child(12)
+    -webkit-animation-delay: -4s
+    animation-delay: -4s
+
+  &:nth-child(13)
+    -webkit-animation-delay: -4.3333333333s
+    animation-delay: -4.3333333333s
+
+  &:nth-child(14)
+    -webkit-animation-delay: -4.6666666667s
+    animation-delay: -4.6666666667s
+
+  &:nth-child(15)
+    -webkit-animation-delay: -5s
+    animation-delay: -5s
+
+  &:nth-child(16)
+    -webkit-animation-delay: -5.3333333333s
+    animation-delay: -5.3333333333s
+
+  &:nth-child(17)
+    -webkit-animation-delay: -5.6666666667s
+    animation-delay: -5.6666666667s
+
+  &:nth-child(18)
+    -webkit-animation-delay: -6s
+    animation-delay: -6s
+
+  &:nth-child(19)
+    -webkit-animation-delay: -6.3333333333s
+    animation-delay: -6.3333333333s
+
+  &:nth-child(20)
+    -webkit-animation-delay: -6.6666666667s
+    animation-delay: -6.6666666667s
+
+  &:nth-child(21)
+    -webkit-animation-delay: -7s
+    animation-delay: -7s
+
+  &:nth-child(22)
+    -webkit-animation-delay: -7.3333333333s
+    animation-delay: -7.3333333333s
+
+  &:nth-child(23)
+    -webkit-animation-delay: -7.6666666667s
+    animation-delay: -7.6666666667s
+
+  &:nth-child(24)
+    -webkit-animation-delay: -8s
+    animation-delay: -8s
+
+  &:nth-child(25)
+    -webkit-animation-delay: -8.3333333333s
+    animation-delay: -8.3333333333s
+
+  &:nth-child(26)
+    -webkit-animation-delay: -8.6666666667s
+    animation-delay: -8.6666666667s
+
+  &:nth-child(27)
+    -webkit-animation-delay: -9s
+    animation-delay: -9s
+
+  &:nth-child(28)
+    -webkit-animation-delay: -9.3333333333s
+    animation-delay: -9.3333333333s
+
+  &:nth-child(29)
+    -webkit-animation-delay: -9.6666666667s
+    animation-delay: -9.6666666667s
+
+  &:nth-child(30)
+    -webkit-animation-delay: -10s
+    animation-delay: -10s
+
+  &:nth-child(31)
+    -webkit-animation-delay: -10.3333333333s
+    animation-delay: -10.3333333333s
+
+@-webkit-keyframes move
+  from
+    -webkit-transform: rotateX(60deg) translateZ(200px) scale(0.01) rotateZ(0deg)
+    transform: rotateX(60deg) translateZ(200px) scale(0.01) rotateZ(0deg)
+
+  75%
+    -webkit-transform: rotateX(60deg) translateZ(-20px) scale(0.5) rotateZ(-180deg)
+    transform: rotateX(60deg) translateZ(-20px) scale(0.5) rotateZ(-180deg)
+    opacity: 1
+
+  to
+    opacity: 0
+    -webkit-transform: rotateX(60deg) translateZ(0) scale(1) rotateZ(360deg)
+    transform: rotateX(60deg) translateZ(0) scale(1) rotateZ(360deg)
+
+@keyframes move
+  from
+    -webkit-transform: rotateX(60deg) translateZ(200px) scale(0.01) rotateZ(0deg)
+    transform: rotateX(60deg) translateZ(200px) scale(0.01) rotateZ(0deg)
+
+  75%
+    -webkit-transform: rotateX(60deg) translateZ(-20px) scale(0.5) rotateZ(-180deg)
+    transform: rotateX(60deg) translateZ(-20px) scale(0.5) rotateZ(-180deg)
+    opacity: 1
+
+  to
+    opacity: 0
+    -webkit-transform: rotateX(60deg) translateZ(0) scale(1) rotateZ(360deg)
+    transform: rotateX(60deg) translateZ(0) scale(1) rotateZ(360deg)
+
+.calcOut
+  margin: auto
+  border: 1px solid $primary-neon
+  border-radius: 10px
+  background-color: black
+  transform-style: preserve-3d
+  transform: translateZ(300px)
+  height: 350px
+  width: 500px
+  position: relative
+  z-index: 2
+
+.bS1
+  box-shadow: 0px 0px 9px $primary-neon
+
+.circBox
+  position: relative
+  margin-left: 0px
+  height: 100px
+  width: 100px
+  z-index: -1
+
+.boxMove1
+  -webkit-animation: bM1 10s linear infinite
+  -moz-animation: bM1 10s linear infinite
+  -o-animation: bM1 10s linear infinite
+  animation: bM1 10s linear infinite
+
+@-webkit-keyframes bM1
+  0%
+    transform: translate(0px, 0px)
+
+  5%
+    transform: translate(0px, 0px)
+
+  30%
+    transform: translate(400px, 0)
+
+  35%
+    transform: translate(400px, 0)
+
+  50%
+    transform: translate(400px, 250px)
+
+  55%
+    transform: translate(400px, 250px)
+
+  80%
+    transform: translate(0px, 250px)
+
+  85%
+    transform: translate(0px, 250px)
+
+  100%
+    transform: translate(0px, 0px)
+
+@-moz-keyframes bM1
+  0%
+    transform: translate(0px, 0px)
+
+  5%
+    transform: translate(0px, 0px)
+
+  30%
+    transform: translate(400px, 0)
+
+  35%
+    transform: translate(400px, 0)
+
+  50%
+    transform: translate(400px, 250px)
+
+  55%
+    transform: translate(400px, 250px)
+
+  80%
+    transform: translate(0px, 250px)
+
+  85%
+    transform: translate(0px, 250px)
+
+  100%
+    transform: translate(0px, 0px)
+
+@-o-keyframes bM1
+  0%
+    transform: translate(0px, 0px)
+
+  5%
+    transform: translate(0px, 0px)
+
+  30%
+    transform: translate(400px, 0)
+
+  35%
+    transform: translate(400px, 0)
+
+  50%
+    transform: translate(400px, 250px)
+
+  55%
+    transform: translate(400px, 250px)
+
+  80%
+    transform: translate(0px, 250px)
+
+  85%
+    transform: translate(0px, 250px)
+
+  100%
+    transform: translate(0px, 0px)
+
+@keyframes bM1
+  0%
+    transform: translate(0px, 0px)
+
+  5%
+    transform: translate(0px, 0px)
+
+  30%
+    transform: translate(400px, 0)
+
+  35%
+    transform: translate(400px, 0)
+
+  50%
+    transform: translate(400px, 250px)
+
+  55%
+    transform: translate(400px, 250px)
+
+  80%
+    transform: translate(0px, 250px)
+
+  85%
+    transform: translate(0px, 250px)
+
+  100%
+    transform: translate(0px, 0px)
+
+.circBar
+  position: absolute
+  left: -25px
+  top: 30px
+  height: 40px
+  width: 150px
+  z-index: -1
+
+.rB1
+  -webkit-animation: rB1 10s linear infinite
+  -moz-animation: rB1 10s linear infinite
+  -o-animation: rB1 10s linear infinite
+  animation: rB1 10s linear infinite
+
+@-webkit-keyframes rB1
+  0%
+    transform: rotate(0deg)
+
+  5%
+    transform: rotate(90deg)
+
+  30%
+    transform: rotate(90deg)
+
+  35%
+    transform: rotate(180deg)
+
+  50%
+    transform: rotate(180deg)
+
+  55%
+    transform: rotate(270deg)
+
+  80%
+    transform: rotate(270deg)
+
+  85%
+    transform: rotate(360deg)
+
+  100%
+    transform: rotate(360deg)
+
+@-moz-keyframes rB1
+  0%
+    transform: rotate(0deg)
+
+  5%
+    transform: rotate(90deg)
+
+  30%
+    transform: rotate(90deg)
+
+  35%
+    transform: rotate(180deg)
+
+  50%
+    transform: rotate(180deg)
+
+  55%
+    transform: rotate(270deg)
+
+  80%
+    transform: rotate(270deg)
+
+  85%
+    transform: rotate(360deg)
+
+  100%
+    transform: rotate(360deg)
+
+@-o-keyframes rB1
+  0%
+    transform: rotate(0deg)
+
+  5%
+    transform: rotate(90deg)
+
+  30%
+    transform: rotate(90deg)
+
+  35%
+    transform: rotate(180deg)
+
+  50%
+    transform: rotate(180deg)
+
+  55%
+    transform: rotate(270deg)
+
+  80%
+    transform: rotate(270deg)
+
+  85%
+    transform: rotate(360deg)
+
+  100%
+    transform: rotate(360deg)
+
+@keyframes rB1
+  0%
+    transform: rotate(0deg)
+
+  5%
+    transform: rotate(90deg)
+
+  30%
+    transform: rotate(90deg)
+
+  35%
+    transform: rotate(180deg)
+
+  50%
+    transform: rotate(180deg)
+
+  55%
+    transform: rotate(270deg)
+
+  80%
+    transform: rotate(270deg)
+
+  85%
+    transform: rotate(360deg)
+
+  100%
+    transform: rotate(360deg)
+
+.circCon
+  position: absolute
+  transform-style: preserve-3d
+  height: 40px
+  width: 40px
+  z-index: -1
+
+.rot
+  -webkit-animation: nSl 6s infinite linear forwards
+  -moz-animation: nSl 6s infinite linear forwards
+  -o-animation: nSl 6s infinite linear forwards
+  animation: nSl 6s infinite linear forwards
+
+@-webkit-keyframes nSl
+  0%
+    transform: rotate(0deg) rotateX(0deg)
+
+  100%
+    transform: rotate(360deg) rotateX(360deg)
+
+@-moz-keyframes nSl
+  0%
+    transform: rotate(0deg) rotateX(0deg)
+
+  100%
+    transform: rotate(360deg) rotateX(360deg)
+
+@-o-keyframes nSl
+  0%
+    transform: rotate(0deg) rotateX(0deg)
+
+  100%
+    transform: rotate(360deg) rotateX(360deg)
+
+@keyframes nSl
+  0%
+    transform: rotate(0deg) rotateX(0deg)
+
+  100%
+    transform: rotate(360deg) rotateX(360deg)
+
+.circ
+  position: absolute
+  z-index: -1
+  border-radius: 50%
+  border: 1px solid $primary-neon
+  background: -moz-radial-gradient(center, ellipse cover, $bright-neon 0%, rgba(255, 255, 255, 0.01) 96%, rgba(255, 255, 255, 0) 100%)
+  background: -webkit-radial-gradient(center, ellipse cover, $bright-neon 0%, rgba(255, 255, 255, 0.01) 96%, rgba(255, 255, 255, 0) 100%)
+  background: radial-gradient(ellipse at center, $bright-neon 0%, rgba(255, 255, 255, 0.01) 96%, rgba(255, 255, 255, 0) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3633ffbb', endColorstr='#00ffffff',GradientType=1 )
+  transform-style: preserve-3d
+  height: 100%
+  width: 100%
+
+.cr1
+  transform: rotateY(20deg) rotateX(60deg)
+
+.cr2
+  transform: rotateY(40deg) rotateX(100deg)
+
+.cr3
+  transform: rotateY(60deg) rotateX(20deg)
+
+.cr4
+  transform: rotateY(80deg) rotateX(160deg)
+
+.cr5
+  transform: rotateY(100deg) rotateX(80deg)
+
+.cr6
+  transform: rotateY(120deg) rotateX(140deg)
+
+.cr7
+  transform: rotateY(140deg) rotateX(120deg)
+
+.cr8
+  transform: rotateY(60deg) rotateX(40deg)
+
+.calcInner
+  position: absolute
+  top: 0
+  left: 0
+  border-radius: 10px
+  background-color: #000
+  transform-style: preserve-3d
+  transform: translateZ(350px)
+  overflow: hidden
+  -webkit-mask-image: -webkit-radial-gradient(white, black)
+  height: 350px
+  width: 500px
+
+  &:after
+    content: ''
+    position: absolute
+    top: -30px
+    left: -30px
+    background-color: #fff
+    background: -moz-linear-gradient(-45deg, $black 0%, rgba(0, 0, 0, 0) 100%)
+    background: -webkit-linear-gradient(-45deg, $black 0%, rgba(0, 0, 0, 0) 100%)
+    background: linear-gradient(135deg, $black 0%, rgba(0, 0, 0, 0) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', endColorstr='#00000000',GradientType=1 )
+    height: 950px
+    width: 525px
+    z-index: -1
+
+form
+  width: 100%
+  background-color: rgba(6, 2, 6, 0.7)
+  display: inline-grid
+  justify-content: center
+  margin: auto
+
+textarea
+  resize: none
+  color: white
+  height: 85px
+
+input, textarea
+  background: transparent
+  border: none
+  outline: none
+  border-bottom: 2px solid $pulse-neon
+  margin-bottom: 30px
+  margin: 20px 0 15px 0
+  width: 324px
+  padding: 10px
+  color: white
+
+button
+  background-color: $pulse-neon
+  color: white
+  border: none
+  padding: 10px
+  border-radius: 10px
+
+  &:hover
+    cursor: pointer
+    outline: none
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.7), 0px 0px 0px 3px #993399, 0px 0px 0px 1px #993399 inset, 0px 0px 20px $pulse-neon, 0px 0px 20px $pulse-neon
+    background-color: transparent
+    transition: all 0.5s ease-in-out
