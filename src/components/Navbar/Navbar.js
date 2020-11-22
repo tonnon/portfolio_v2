@@ -1,11 +1,12 @@
 import React from 'react';
 import cvpdf from '../../assets/cv-tonon.pdf';
+import { Link, animateScroll as scroll } from "react-scroll";
 import './navbar.sass';
 
 let items = [
     {
         link: 'Portfólio',
-        href: '#portfolio'
+        href: 'portfolio'
     },
     {
         link: 'CV',
@@ -14,11 +15,9 @@ let items = [
     },
     {
         link: 'Contato',
-        href: "#contact",
+        href: "div-contact-form",
     }
 ];
-
-
 
 function Navbar() {
     return (
@@ -26,7 +25,16 @@ function Navbar() {
             <nav>
                 <ul id="globalNav">
                 {items.map((item, index) => (
-                    <li key={index}><a href={item.href} target={item.blank}>{item.link}</a></li>
+                    <li key={index}>
+                        <Link     
+                            activeClass="active"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            to={item.href} target={item.blank}>{item.link}
+                        </Link>
+                    </li>
                 ))}    
             </ul>
             </nav>
