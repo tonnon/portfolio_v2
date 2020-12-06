@@ -1,0 +1,41 @@
+@import "../../styles/_colors.sass"
+
+.hello
+  color: white
+  padding-bottom: 40px
+
+.footer
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+
+.icon
+  font-size: 26px
+  color: #6699ff
+
+.icon-container
+  display: flex
+  align-items: center
+
+  p
+    font-size: 13px
+    margin-top: 16px
+    margin-left: 5px
+
+a,
+.icon-container
+  svg
+    color: $blue
+    font-size: 20px
+
+.copyright
+  text-align: center
+  padding: 20px 0 20px 0
+
+@media screen and (min-width: 320px) and (max-width: 537px)
+  .footer
+    display: grid
+    justify-content: center
+
+  a, .icon-container
+    margin: 10px auto
