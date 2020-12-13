@@ -19,6 +19,7 @@ import helptoner from '../../assets/bgcards/helptoner.gif';
 function Portfolio() {
     const [filter, setFilter] = useState('all');
     const [projects, setProjects] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     function shuffle(arra1) {
         var ctr = arra1.length,
@@ -36,10 +37,10 @@ function Portfolio() {
       
       useEffect(() => {
         setProjects(shuffle(portfolio));
-    
+        setLoading(false);
         const filtered = portfolio.map(p => ({ ...p, filtered: p.category.includes(filter) }));
         setProjects(filtered);
-      }, [filter], []);
+      }, [filter], [loading]);
 
     let portfolio = [
         {
@@ -106,6 +107,7 @@ function Portfolio() {
 
     let randomProjects = portfolio[Math.floor(Math.random() * portfolio.length)];
     console.log(randomProjects);
+    
 
     return (
         <div>
@@ -139,6 +141,32 @@ function Portfolio() {
             <div id="portfolio">
                 {projects.map(project => project.filtered === true ? (
                     <FadeIn key={project.title}>
+
+                        {
+                            loading && 
+                                <div className="card-wrap">
+                                    <div className="card">
+                                        <div className="card-bg"/>
+                                            <div class="home">
+                                                <div id='container'>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                    <div class='dot'></div>
+                                                </div>
+                                            </div>
+                                    </div>
+                            </div>
+                        }
+
                         <a target="_blank" href={project.video || project.url}>
                             <div  className="card-wrap">
                                 <div className="card">
