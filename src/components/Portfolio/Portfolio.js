@@ -139,32 +139,37 @@ function Portfolio() {
                 </div>
             </div>
             <div id="portfolio">
-            {
-                            loading && 
-                                <div className="card-wrap">
-                                    <div className="card">
-                                        <div className="card-bg"/>
-                                            <div class="home">
-                                                <div id='container'>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                    <div class='dot'></div>
-                                                </div>
-                                            </div>
-                                    </div>
-                            </div>
-                        }
                 {projects.map(project => project.filtered === true ? (
                     <FadeIn key={project.title}>
+
+                        {
+                            loading && (
+                                <>
+                                    <div className="card-wrap">
+                                        <div className="card">
+                                            <div className="card-bg"/>
+                                                <div class="home">
+                                                    <div id='container'>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                        <div class='dot'></div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </>
+                            )
+                        }
+
                         <a target="_blank" href={project.video || project.url}>
                             <div  className="card-wrap">
                                 <div className="card">
