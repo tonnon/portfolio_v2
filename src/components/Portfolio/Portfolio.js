@@ -20,16 +20,26 @@ function Portfolio() {
     const [filter, setFilter] = useState('all');
     const [projects, setProjects] = useState([]);
 
-    useEffect(() => {
-        setProjects(portfolio);
-      }, []);
-
+    function shuffle(arra1) {
+        var ctr = arra1.length,
+          temp,
+          index;
+        while (ctr > 0) {
+          index = Math.floor(Math.random() * ctr);
+          ctr--;
+          temp = arra1[ctr];
+          arra1[ctr] = arra1[index];
+          arra1[index] = temp;
+        }
+        return arra1;
+      }
+      
       useEffect(() => {
-        setProjects([]);
+        setProjects(shuffle(portfolio));
     
         const filtered = portfolio.map(p => ({ ...p, filtered: p.category.includes(filter) }));
         setProjects(filtered);
-      }, [filter]);
+      }, [filter], []);
 
     let portfolio = [
         {
@@ -81,7 +91,7 @@ function Portfolio() {
             category: ['all', 'game', 'website']
         },
         {
-            title: 'Be The hero',
+            title: 'Be The Hero',
             img: bethehero,
             url: 'https://bahero.herokuapp.com/',
             category: ['all', 'website']
@@ -93,6 +103,9 @@ function Portfolio() {
             category: ['all', 'website']
         },
     ];
+
+    let randomProjects = portfolio[Math.floor(Math.random() * portfolio.length)];
+    console.log(randomProjects);
 
     return (
         <div>
