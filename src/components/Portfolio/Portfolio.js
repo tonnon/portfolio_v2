@@ -139,10 +139,7 @@ function Portfolio() {
                 </div>
             </div>
             <div id="portfolio">
-                {projects.map(project => project.filtered === true ? (
-                    <FadeIn key={project.title}>
-
-                        {
+            {
                             loading && 
                                 <div className="card-wrap">
                                     <div className="card">
@@ -166,7 +163,8 @@ function Portfolio() {
                                     </div>
                             </div>
                         }
-
+                {projects.map(project => project.filtered === true ? (
+                    <FadeIn key={project.title}>
                         <a target="_blank" href={project.video || project.url}>
                             <div  className="card-wrap">
                                 <div className="card">
