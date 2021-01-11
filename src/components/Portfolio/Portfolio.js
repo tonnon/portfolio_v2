@@ -15,6 +15,7 @@ import orbital from '../../assets/bgcards/orbital.gif';
 import cybertetromino from '../../assets/bgcards/cybertetromino.gif';
 import bethehero from '../../assets/bgcards/bethehero.png';
 import helptoner from '../../assets/bgcards/helptoner.gif';
+import rickandmorty from '../../assets/bgcards/rickandmorty.gif';
 
 function Portfolio() {
     const [filter, setFilter] = useState('all');
@@ -99,6 +100,12 @@ function Portfolio() {
             title: 'Helptoner',
             img: helptoner,
             url: 'https://helptoner.herokuapp.com/',
+            category: ['all', 'website']
+        },
+        {
+            title: 'Rick and Morty',
+            img: rickandmorty,
+            url: 'https://rick-and-morty-infinitescroll.herokuapp.com/',
             category: ['all', 'website']
         },
     ];
